@@ -28,5 +28,15 @@
       "indentSize" : 2,
       "packageName" : "com.mycompany.myapp"
     }
+  }, {
+    "module" : "spring-boot",
+    "date" : "2023-07-11T14:23:14.403096985Z",
+    "properties" : {
+      "projectName" : "project-system",
+      "baseName" : "projectsys",
+      "endOfLine" : "lf",
+      "indentSize" : 2,
+      "packageName" : "com.mycompany.myapp"
+    }
   } ]
 }
