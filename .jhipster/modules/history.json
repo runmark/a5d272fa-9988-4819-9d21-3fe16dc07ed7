@@ -18,5 +18,15 @@
       "indentSize" : 2,
       "packageName" : "com.mycompany.myapp"
     }
+  }, {
+    "module" : "java-base",
+    "date" : "2023-07-11T14:23:13.714315675Z",
+    "properties" : {
+      "projectName" : "project-system",
+      "baseName" : "projectsys",
+      "endOfLine" : "lf",
+      "indentSize" : 2,
+      "packageName" : "com.mycompany.myapp"
+    }
   } ]
 }
