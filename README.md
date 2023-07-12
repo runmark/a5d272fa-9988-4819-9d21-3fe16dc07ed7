@@ -40,5 +40,6 @@ docker compose -f src/main/docker/mysql.yml up -d
 - [Logs spy](documentation/logs-spy.md)
 - [MySQL](documentation/mysql.md)
 - [CORS configuration](documentation/cors-configuration.md)
+- [Cucumber](documentation/cucumber.md)
 
 <!-- jhipster-needle-documentation -->
