@@ -170,5 +170,16 @@
       "packageName" : "com.mycompany.myapp",
       "serverPort" : 8080
     }
+  }, {
+    "module" : "dummy-liquibase-changelog",
+    "date" : "2023-07-12T12:10:16.275211431Z",
+    "properties" : {
+      "projectName" : "project-system",
+      "baseName" : "projectsys",
+      "endOfLine" : "lf",
+      "indentSize" : 2,
+      "packageName" : "com.mycompany.myapp",
+      "serverPort" : 8080
+    }
   } ]
 }
