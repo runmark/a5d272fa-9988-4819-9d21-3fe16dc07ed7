@@ -42,5 +42,6 @@ docker compose -f src/main/docker/mysql.yml up -d
 - [MySQL](documentation/mysql.md)
 - [CORS configuration](documentation/cors-configuration.md)
 - [Cucumber](documentation/cucumber.md)
+- [Kipe authorization](documentation/kipe-authorization.md)
 
 <!-- jhipster-needle-documentation -->
