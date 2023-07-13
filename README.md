@@ -46,5 +46,6 @@ docker compose -f src/main/docker/mysql.yml up -d
 - [Kipe expression](documentation/kipe-expression.md)
 - [Cucumber authentication](documentation/cucumber-authentication.md)
 - [Dummy](documentation/dummy.md)
+- [Vue](documentation/vue.md)
 
 <!-- jhipster-needle-documentation -->

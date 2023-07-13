@@ -203,5 +203,16 @@
       "serverPort" : 8080,
       "baseName" : "projectsys"
     }
+  }, {
+    "module" : "vue-core",
+    "date" : "2023-07-13T02:55:21.503712221Z",
+    "properties" : {
+      "endOfLine" : "lf",
+      "packageName" : "com.mycompany.myapp",
+      "projectName" : "project-system",
+      "indentSize" : 2,
+      "serverPort" : 8080,
+      "baseName" : "projectsys"
+    }
   } ]
 }
