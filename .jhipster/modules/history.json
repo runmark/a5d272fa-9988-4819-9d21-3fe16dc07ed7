@@ -192,5 +192,16 @@
       "packageName" : "com.mycompany.myapp",
       "serverPort" : 8080
     }
+  }, {
+    "module" : "prettier",
+    "date" : "2023-07-13T02:55:17.672070057Z",
+    "properties" : {
+      "endOfLine" : "lf",
+      "packageName" : "com.mycompany.myapp",
+      "projectName" : "project-system",
+      "indentSize" : 2,
+      "serverPort" : 8080,
+      "baseName" : "projectsys"
+    }
   } ]
 }
