@@ -1,7 +1,10 @@
-package com.mycompany.myapp.dummy.domain.effortmng;
+package com.mycompany.myapp.projmng.domain.effortmng;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.Instant;
 import org.hibernate.annotations.Cache;
@@ -224,20 +227,20 @@ public class EffortRecord implements Serializable {
   }
 
   // prettier-ignore
-    @Override
-    public String toString() {
-        return "EffortRecord{" +
-                "id=" + getId() +
-                ", effort=" + getEffort() +
-                ", workDate='" + getWorkDate() + "'" +
-                ", notes='" + getNotes() + "'" +
-                ", projectId=" + getProjectId() +
-                ", empId=" + getEmpId() +
-                ", tenantId=" + getTenantId() +
-                ", createdAt='" + getCreatedAt() + "'" +
-                ", createdBy=" + getCreatedBy() +
-                ", lastUpdatedAt='" + getLastUpdatedAt() + "'" +
-                ", lastUpdateBy=" + getLastUpdateBy() +
-                "}";
-    }
+  @Override
+  public String toString() {
+    return "EffortRecord{" +
+        "id=" + getId() +
+        ", effort=" + getEffort() +
+        ", workDate='" + getWorkDate() + "'" +
+        ", notes='" + getNotes() + "'" +
+        ", projectId=" + getProjectId() +
+        ", empId=" + getEmpId() +
+        ", tenantId=" + getTenantId() +
+        ", createdAt='" + getCreatedAt() + "'" +
+        ", createdBy=" + getCreatedBy() +
+        ", lastUpdatedAt='" + getLastUpdatedAt() + "'" +
+        ", lastUpdateBy=" + getLastUpdateBy() +
+        "}";
+  }
 }

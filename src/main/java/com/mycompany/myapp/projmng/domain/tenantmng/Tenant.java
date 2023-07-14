@@ -1,4 +1,4 @@
-package com.mycompany.myapp.dummy.domain.tenantmng;
+package com.mycompany.myapp.projmng.domain.tenantmng;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -142,15 +142,15 @@ public class Tenant implements Serializable {
   }
 
   // prettier-ignore
-    @Override
-    public String toString() {
-        return "Tenant{" +
-                "id=" + getId() +
-                ", name='" + getName() + "'" +
-                ", createdAt='" + getCreatedAt() + "'" +
-                ", createdBy=" + getCreatedBy() +
-                ", lastUpdatedAt='" + getLastUpdatedAt() + "'" +
-                ", lastUpdateBy=" + getLastUpdateBy() +
-                "}";
-    }
+  @Override
+  public String toString() {
+    return "Tenant{" +
+        "id=" + getId() +
+        ", name='" + getName() + "'" +
+        ", createdAt='" + getCreatedAt() + "'" +
+        ", createdBy=" + getCreatedBy() +
+        ", lastUpdatedAt='" + getLastUpdatedAt() + "'" +
+        ", lastUpdateBy=" + getLastUpdateBy() +
+        "}";
+  }
 }

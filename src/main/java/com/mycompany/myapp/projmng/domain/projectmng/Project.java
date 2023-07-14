@@ -1,4 +1,4 @@
-package com.mycompany.myapp.dummy.domain.projectmng;
+package com.mycompany.myapp.projmng.domain.projectmng;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -226,20 +226,20 @@ public class Project implements Serializable {
   }
 
   // prettier-ignore
-    @Override
-    public String toString() {
-        return "Project{" +
-                "id=" + getId() +
-                ", num='" + getNum() + "'" +
-                ", name='" + getName() + "'" +
-                ", status='" + getStatus() + "'" +
-                ", mngId=" + getMngId() +
-                ", contractId=" + getContractId() +
-                ", tenantId=" + getTenantId() +
-                ", createdAt='" + getCreatedAt() + "'" +
-                ", createdBy=" + getCreatedBy() +
-                ", lastUpdatedAt='" + getLastUpdatedAt() + "'" +
-                ", lastUpdateBy=" + getLastUpdateBy() +
-                "}";
-    }
+  @Override
+  public String toString() {
+    return "Project{" +
+        "id=" + getId() +
+        ", num='" + getNum() + "'" +
+        ", name='" + getName() + "'" +
+        ", status='" + getStatus() + "'" +
+        ", mngId=" + getMngId() +
+        ", contractId=" + getContractId() +
+        ", tenantId=" + getTenantId() +
+        ", createdAt='" + getCreatedAt() + "'" +
+        ", createdBy=" + getCreatedBy() +
+        ", lastUpdatedAt='" + getLastUpdatedAt() + "'" +
+        ", lastUpdateBy=" + getLastUpdateBy() +
+        "}";
+  }
 }

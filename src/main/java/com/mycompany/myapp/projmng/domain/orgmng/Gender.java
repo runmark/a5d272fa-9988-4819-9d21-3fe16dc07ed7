@@ -1,4 +1,4 @@
-package com.mycompany.myapp.dummy.domain.orgmng;
+package com.mycompany.myapp.projmng.domain.orgmng;
 
 /**
  * The Gender enumeration.
