@@ -1,4 +1,4 @@
-package com.mycompany.myapp.projmng.application;
+package com.mycompany.myapp.projmng.domain.orgmng;
 
 public class OrgBuilderFactor {
 
