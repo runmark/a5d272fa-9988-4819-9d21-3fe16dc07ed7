@@ -1,6 +1,9 @@
 package com.mycompany.myapp.projmngrefact.adapter;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.mycompany.myapp.projmngrefact.application.CreateOrgRequest;
+import com.mycompany.myapp.projmngrefact.application.OrgResponse;
+import com.mycompany.myapp.projmngrefact.application.OrgService;
+import com.mycompany.myapp.projmngrefact.application.UpdateOrgBasicRequest;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +16,6 @@ public class OrgController {
 
   private final OrgService orgService;
 
-  @Autowired
   public OrgController(OrgService orgService) {
     this.orgService = orgService;
   }
@@ -26,14 +28,14 @@ public class OrgController {
 
   @PatchMapping("/api/organizations/{id}")
   public OrgResponse updateOrgBasic(@PathVariable Long id, @RequestBody UpdateOrgBasicRequest request) {
-    Long user = acquireUserId();
-    return orgService.updateOrgBasic(id, request, user);
+    // TODO:
+    return new OrgResponse();
   }
 
   @PostMapping("/api/organizations/{id}/cancel")
   public Long cancelOrg(@PathVariable Long id, @RequestParam Long tenant) {
-    Long user = acquireUserId();
-    return orgService.cancelOrg(id, tenant, user);
+    // TODO:
+    return 1L;
   }
 
   private Long acquireUserId() {

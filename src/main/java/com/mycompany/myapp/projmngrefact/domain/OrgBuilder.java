@@ -1,6 +1,5 @@
 package com.mycompany.myapp.projmngrefact.domain;
 
-import com.mycompany.myapp.projmng.domain.orgmng.OrgType;
 import java.time.LocalDateTime;
 
 public class OrgBuilder {
@@ -75,7 +74,7 @@ public class OrgBuilder {
 
   private void validate() {
     commonValidator.tenantShouldValid(tenantId);
-    orgLeaderValidator.orgLeaderShouldValid(leaderId);
+    orgLeaderValidator.orgLeaderShouldValid(tenantId, leaderId);
 
     orgNameValidator.orgNameShouldNotEmpty(name);
     orgNameValidator.nameShouldNotDuplicatedInSameSuperior(tenantId, superiorId, name);

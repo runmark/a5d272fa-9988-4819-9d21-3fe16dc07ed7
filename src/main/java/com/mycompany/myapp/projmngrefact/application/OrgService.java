@@ -1,17 +1,18 @@
 package com.mycompany.myapp.projmngrefact.application;
 
+import com.mycompany.myapp.projmngrefact.domain.Org;
+import com.mycompany.myapp.projmngrefact.domain.OrgBuilder;
 import com.mycompany.myapp.projmngrefact.domain.OrgBuilderFactor;
+import com.mycompany.myapp.projmngrefact.domain.OrgRepository;
 
 public class OrgService {
 
   private final OrgBuilderFactor orgBuilderFactor;
   private final OrgRepository orgRepository;
-  private final OrgHandler orgHandler;
 
-  public OrgService(OrgBuilderFactor orgBuilderFactor, OrgRepository orgRepository, OrgHandler orgHandler) {
+  public OrgService(OrgBuilderFactor orgBuilderFactor, OrgRepository orgRepository) {
     this.orgBuilderFactor = orgBuilderFactor;
     this.orgRepository = orgRepository;
-    this.orgHandler = orgHandler;
   }
 
   public OrgResponse addOrg(CreateOrgRequest request, Long userId) {
@@ -26,8 +27,22 @@ public class OrgService {
       .createdBy(userId)
       .build();
 
-    Org org = builder.build(request, userId);
     orgRepository.save(org);
-    return orgHandler.handle(org);
+    return buildOrgDto(org);
+  }
+
+  private static OrgResponse buildOrgDto(Org org) {
+    OrgResponse response = new OrgResponse();
+    response.setId(org.getId());
+    response.setTenantId(org.getTenantId());
+    response.setOrgTypeCode(org.getOrgTypeCode());
+    response.setName(org.getName());
+    response.setLeaderId(org.getLeaderId());
+    response.setSuperiorId(org.getSuperiorId());
+    response.setCreatedBy(org.getCreatedBy());
+    response.setCreatedAt(org.getCreatedAt());
+    response.setLastUpdatedBy(org.getLastUpdatedBy());
+    response.setLastUpdatedAt(org.getLastUpdatedAt());
+    return response;
   }
 }
