@@ -1,4 +1,4 @@
-package com.mycompany.myapp.projmngrefact.domain;
+package com.mycompany.myapp.projmngrefact.domain.emp;
 
 public enum EmpStatus {
   REGULAR("REGULAR", "正式"),

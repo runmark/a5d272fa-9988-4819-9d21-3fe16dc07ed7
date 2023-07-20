@@ -1,5 +1,8 @@
 package com.mycompany.myapp.projmngrefact.domain;
 
+import com.mycompany.myapp.projmngrefact.domain.emp.EmpRepository;
+import com.mycompany.myapp.projmngrefact.domain.emp.EmpStatus;
+
 public class OrgLeaderValidator {
 
   private EmpRepository empRepository;

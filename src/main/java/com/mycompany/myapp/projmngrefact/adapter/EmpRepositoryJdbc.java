@@ -1,7 +1,7 @@
 package com.mycompany.myapp.projmngrefact.adapter;
 
-import com.mycompany.myapp.projmngrefact.domain.EmpRepository;
-import com.mycompany.myapp.projmngrefact.domain.EmpStatus;
+import com.mycompany.myapp.projmngrefact.domain.emp.EmpRepository;
+import com.mycompany.myapp.projmngrefact.domain.emp.EmpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class EmpRepositoryJdbc implements EmpRepository {
