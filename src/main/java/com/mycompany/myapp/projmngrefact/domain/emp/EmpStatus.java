@@ -5,7 +5,8 @@ public enum EmpStatus {
   PROBATION("PROBATION", "试用"),
   REGISTRATION("REGISTRATION", "登记"),
   RETIREMENT("RETIREMENT", "退休"),
-  DISMISSAL("DISMISSAL", "离职");
+  DISMISSAL("DISMISSAL", "离职"),
+  TERMINATED("TERMINATED", "解雇");
 
   private final String code;
   private final String desc;
