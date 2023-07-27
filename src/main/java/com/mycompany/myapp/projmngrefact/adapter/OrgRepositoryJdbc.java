@@ -12,6 +12,11 @@ public class OrgRepositoryJdbc implements OrgRepository {
   private final JdbcTemplate jdbc;
   private final SimpleJdbcInsert insertOrg;
 
+  public OrgRepositoryJdbc(JdbcTemplate jdbc) {
+    this.jdbc = jdbc;
+    this.insertOrg = new SimpleJdbcInsert(jdbc).withTableName("org");
+  }
+
   @Override
   public Org save(Org org) {
     // TODO Auto-generated method stub
@@ -40,5 +45,11 @@ public class OrgRepositoryJdbc implements OrgRepository {
   public int update(Org org) {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'update'");
+  }
+
+  @Override
+  public boolean existsByIdAndStatus(Long tenantId, Long orgId, OrgStatus effective) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'existsByIdAndStatus'");
   }
 }

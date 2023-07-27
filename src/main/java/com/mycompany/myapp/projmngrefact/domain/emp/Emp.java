@@ -1,6 +1,5 @@
 package com.mycompany.myapp.projmngrefact.domain.emp;
 
-import com.mycompany.myapp.projmngrefact.common.AuditableEntity;
 import com.mycompany.myapp.projmngrefact.domain.BusinessException;
 
 import java.time.LocalDate;
@@ -142,6 +141,7 @@ public class Emp extends AggregateRoot {
     }
 
     public Emp updateSkill(Long skillTypeId, SkillLevel level, Integer duration, Long userId) {
+
         Skill theSkill = this.getSkill(skillTypeId)
                 .orElseThrow(() -> new IllegalArgumentException("不存在要修改的skillTypeId!"));
 
@@ -150,7 +150,8 @@ public class Emp extends AggregateRoot {
             theSkill.setLevel(level)
                     .setDuration(duration)
                     .setLastUpdatedBy(userId)
-                    .setLastUpdatedAt(LocalDateTime.now()).toUpdate();
+                    .setLastUpdatedAt(LocalDateTime.now())
+                    .toUpdate();
         }
         return this;
     }
@@ -227,4 +228,5 @@ public class Emp extends AggregateRoot {
         // TODO ...
         return this;
     }
+
 }

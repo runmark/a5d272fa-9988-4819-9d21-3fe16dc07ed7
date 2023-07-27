@@ -1,7 +1,11 @@
 package com.mycompany.myapp.projmngrefact.application.emp;
 
+import com.mycompany.myapp.projmngrefact.domain.CommonOrgValidator;
 import com.mycompany.myapp.projmngrefact.domain.emp.Emp;
 import com.mycompany.myapp.projmngrefact.domain.emp.EmpStatus;
+import com.mycompany.myapp.projmngrefact.domain.emp.Gender;
+import com.mycompany.myapp.projmngrefact.domain.emp.Period;
+import com.mycompany.myapp.projmngrefact.domain.emp.SkillLevel;
 
 public class EmpAssembler {
 
@@ -24,7 +28,26 @@ public class EmpAssembler {
                 .setOrgId(request.getOrgId())
                 .setName(request.getName())
                 .setDob(request.getDob())
-                .setGender(Gender.ofCode(request.getGenderCode()))
+                .setGender(Gender.ofCode(request.getGenderCode()));
+
+        request.getSkills().stream().forEach(s -> result.addSkill(s.getSkillTypeId(),
+                SkillLevel.ofCode(s.getLevelCode()), s.getDuration(), userId));
+
+        request.getExperiences().forEach(e -> result.addExperience(
+                Period.of(e.getStartDate(), e.getEndDate()), e.getCompany(), userId));
+
+        request.getPostCodes().forEach((p -> result.addEmpPost(p, userId)));
+
+        return result;
+    }
+
+    void validateCreateRequest(CreateEmpRequest request) {
+        assertOrg.shouldValid(
+                request.getTenantId(), request.getOrgId());
+    }
+
+    public EmpResponse toResponse(Emp emp) {
+        return null;
     }
 
 }

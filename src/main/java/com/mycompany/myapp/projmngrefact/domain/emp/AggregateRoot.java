@@ -5,11 +5,11 @@ import java.time.LocalDateTime;
 
 public class AggregateRoot extends AuditableEntity {
 
+  protected Long version;
+
   public AggregateRoot(LocalDateTime createdAt, Long createdBy) {
     super(createdAt, createdBy);
   }
-
-  protected Long version;
 
   public Long getVersion() {
     return version;
