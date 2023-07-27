@@ -10,8 +10,8 @@ public class WorkExperience extends AuditableEntity {
   private final Period period;
   private String companyName;
 
-  WorkExperience(Long tenantId, Period period, Long createdBy) {
-    super(LocalDateTime.now(), createdBy);
+  WorkExperience(Long tenantId, Period period, LocalDateTime createdAt, Long createdBy) {
+    super(createdAt, createdBy);
     this.tenantId = tenantId;
     this.period = period;
   }
